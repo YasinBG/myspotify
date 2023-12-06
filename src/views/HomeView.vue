@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  
     <div class="card relative">
       <router-link to="/movie/tt3896198" class="">
         <img
