@@ -26,7 +26,16 @@
         value="Search"
       />
     </form>
-    <div>MOVIES</div>
+    <div v-for="movie in movies" :key="movie.imdbID">
+      <router-link :to="'/movie/' + movie.imdbID">
+
+        <div>
+          <img :src="movie.Poster" alt="">
+          <div>{{ movie.Type }}</div>
+        </div>
+
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -52,7 +61,7 @@ export default {
          .then(data => {
           movies.value = data.Search;
           search.value = "";
-          console.log(movies.value)
+          
          })
       }
     
