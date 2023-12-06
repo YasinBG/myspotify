@@ -27,16 +27,7 @@
       />
     </form>
     <div v-for="movie in movies" :key="movie.imdbID">
-      <div>
-        <router-link :to="'/movie/' + movie.imdbID">
-
-        <div>
-          <img :src="movie.Poster" alt="">
-          <div>{{ movie.Type }}</div>
-        </div>
-
-      </router-link>
-      </div>
+      
       <router-link :to="'/movie/' + movie.imdbID">
 
         <div>
@@ -46,7 +37,7 @@
 
       </router-link>
     </div>
-  </div>
+
 </template>
 
 <script>
